@@ -1,12 +1,12 @@
 const httpStatus = require('http-status');
-const User = require('../models/user.model');
-const RefreshToken = require('../models/refreshToken.model');
-const PasswordResetToken = require('../models/passwordResetToken.model');
+const User = require('./user.model');
+const RefreshToken = require('./refreshToken.model');
+const PasswordResetToken = require('./passwordResetToken.model');
 const moment = require('moment-timezone');
-const { jwtExpirationInterval } = require('../../config/vars');
+const { jwtExpirationInterval } = require('./../../../config/vars');
 const { omit } = require('lodash');
-const APIError = require('../utils/APIError');
-const emailProvider = require('../services/emails/emailProvider');
+const APIError = require('../../utils/APIError');
+const emailProvider = require('../../services/emails/emailProvider');
 
 /**
  * Returns a formated object with tokens

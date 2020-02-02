@@ -1,6 +1,6 @@
 const express = require('express');
 const validate = require('express-validation');
-const controller = require('../../controllers/auth.controller');
+const controller = require('../../domain/auth/auth.controller');
 const oAuthLogin = require('../../middlewares/auth').oAuth;
 const {
   login,
@@ -9,7 +9,7 @@ const {
   refresh,
   sendPasswordReset,
   passwordReset,
-} = require('../../validations/auth.validation');
+} = require('../../domain/auth/auth.validation');
 
 const router = express.Router();
 
